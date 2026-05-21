@@ -47,7 +47,8 @@ boundaryField
 
     interface
     {
-        type            noSlip;
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
     }
 
     fluidGateTop

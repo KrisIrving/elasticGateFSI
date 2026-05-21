@@ -34,24 +34,38 @@ boundaryField
 
     rightOutlet
     {
-        type            fixedValue;
+        type            totalPressure;
+        p0              uniform 0;
+        U               U;
+        phi             phi;
+        rho             rho;
+        psi             none;
+        gamma           1;
         value           uniform 0;
     }
 
     topAtmosphere
     {
-        type            fixedValue;
+        type            totalPressure;
+        p0              uniform 0;
+        U               U;
+        phi             phi;
+        rho             rho;
+        psi             none;
+        gamma           1;
         value           uniform 0;
     }
 
     interface
     {
         type            zeroGradient;
+        value           uniform 0;
     }
 
     fluidGateTop
     {
         type            zeroGradient;
+        value           uniform 0;
     }
 
     frontAndBack
@@ -59,5 +73,4 @@ boundaryField
         type            empty;
     }
 }
-
 // ************************************************************************* //

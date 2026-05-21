@@ -24,7 +24,10 @@ boundaryField
 {
     interface
     {
-        type            zeroGradient;
+        type            solidTraction;
+        traction        uniform (0 0 0);
+        pressure        uniform 0;
+        value           uniform (0 0 0);
     }
 
     gateTop
