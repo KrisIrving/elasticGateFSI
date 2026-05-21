@@ -22,32 +22,53 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    interface
-    {
-        type            fixedValue;
-        value           uniform (0 0 0);
-    }
     leftWall
     {
         type            fixedValue;
         value           uniform (0 0 0);
     }
-    rightWall
+
+    bottomWall
     {
         type            fixedValue;
         value           uniform (0 0 0);
     }
-    lowerWall
+
+    rightOutlet
     {
-        type            fixedValue;
+        type            zeroGradient;
+    }
+
+    topAtmosphere
+    {
+        type            zeroGradient;
+    }
+
+    fluidGateLeft
+    {
+        type            movingWallVelocity;
         value           uniform (0 0 0);
     }
-    atmosphere
+
+    fluidGateRight
     {
-        type            fixedValue;
+        type            movingWallVelocity;
         value           uniform (0 0 0);
     }
-    defaultFaces
+
+    fluidGateBottom
+    {
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+
+    fluidGateTop
+    {
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+
+    frontAndBack
     {
         type            empty;
     }

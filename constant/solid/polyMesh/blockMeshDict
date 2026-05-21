@@ -15,25 +15,24 @@ FoamFile
     object      blockMeshDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-scale 0.146;
+scale 1;
 
 vertices
 (
-    (2 0 0)
-    (2.082191 0 0)
-    (2.082191 0.547945 0)
-    (2 0.547945 0)
+    (1.20 0.010 0.00) // 0
+    (1.24 0.010 0.00) // 1
+    (1.24 0.410 0.00) // 2
+    (1.20 0.410 0.00) // 3
 
-    (2 0 0.1)
-    (2.082191 0 0.1)
-    (2.082191 0.547945 0.1)
-    (2 0.547945 0.1)
+    (1.20 0.010 0.01) // 4
+    (1.24 0.010 0.01) // 5
+    (1.24 0.410 0.01) // 6
+    (1.20 0.410 0.01) // 7
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7) (5 10 1) simpleGrading (1 1 1)
+    hex (0 1 2 3 4 5 6 7) (8 80 1) simpleGrading (1 1 1)
 );
 
 edges
@@ -42,22 +41,49 @@ edges
 
 boundary
 (
-    base
+    solidGateLeft
     {
-        type wall;
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+
+    solidGateRight
+    {
+        type patch;
+        faces
+        (
+            (1 2 6 5)
+        );
+    }
+
+    gateBottom
+    {
+        type patch;
         faces
         (
             (0 1 5 4)
         );
     }
-    interface
+
+    gateTop
     {
-        type wall;
+        type patch;
         faces
         (
-            (1 2 6 5)
-            (2 3 7 6)
-            (3 0 4 7)
+            (3 7 6 2)
+        );
+    }
+
+    solidFrontAndBack
+    {
+        type empty;
+        faces
+        (
+            (0 3 2 1)
+            (4 5 6 7)
         );
     }
 );

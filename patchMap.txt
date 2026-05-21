@@ -1,0 +1,47 @@
+Coordinate system:
+    x: horizontal
+    y: vertical
+    z: 2D thickness
+
+Fluid domain:
+    x = 0.00 ~ 2.50
+    y = 0.00 ~ 1.20
+    z = 0.00 ~ 0.01
+
+Solid gate:
+    x = 1.20 ~ 1.24
+    y = 0.010 ~ 0.410
+    z = 0.00 ~ 0.01
+
+Fluid patches:
+    leftWall
+    bottomWall
+    topAtmosphere
+    rightOutlet
+    frontAndBack
+    fluidGateLeft
+    fluidGateRight
+    fluidGateBottom
+    fluidGateTop
+
+Solid patches:
+    solidGateLeft
+    solidGateRight
+    gateBottom
+    gateTop
+    solidFrontAndBack
+
+Main FSI patch pairs:
+    fluidGateLeft   <-> solidGateLeft
+    fluidGateRight  <-> solidGateRight
+    fluidGateBottom <-> gateBottom
+
+Prescribed moving patch:
+    gateTop is prescribed upward displacement.
+    fluidGateTop is the corresponding fluid-side moving wall above the gate.
+
+Gate motion:
+    direction = +y
+    vT = 0.20 m/s
+    hT = 0.20 m
+    tLift = 1.00 s

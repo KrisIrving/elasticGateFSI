@@ -22,37 +22,53 @@ internalField   uniform 0;
 
 boundaryField
 {
-    interface
-    {
-        type            zeroGradient;
-    }
-
     leftWall
     {
         type            zeroGradient;
     }
 
-    rightWall
+    bottomWall
     {
         type            zeroGradient;
     }
 
-    lowerWall
-    {
-        type            zeroGradient;
-    }
-
-    atmosphere
+    rightOutlet
     {
         type            inletOutlet;
         inletValue      uniform 0;
         value           uniform 0;
     }
 
-    defaultFaces
+    topAtmosphere
+    {
+        type            inletOutlet;
+        inletValue      uniform 0;
+        value           uniform 0;
+    }
+
+    fluidGateLeft
+    {
+        type            zeroGradient;
+    }
+
+    fluidGateRight
+    {
+        type            zeroGradient;
+    }
+
+    fluidGateBottom
+    {
+        type            zeroGradient;
+    }
+
+    fluidGateTop
+    {
+        type            zeroGradient;
+    }
+
+    frontAndBack
     {
         type            empty;
     }
 }
-
 // ************************************************************************* //

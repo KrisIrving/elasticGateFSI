@@ -1,0 +1,45 @@
+Case name:
+    elasticGateFSI
+
+Base case:
+    solids4foam flexibleDamBreak
+
+Coordinate system:
+    x: horizontal
+    y: vertical
+    z: thickness direction
+
+Fluid domain:
+    xmin = 0.00
+    xmax = 2.50
+    ymin = 0.00
+    ymax = 1.20
+    zmin = 0.00
+    zmax = 0.01
+
+Initial water region:
+    xmin = 0.00
+    xmax = 1.20
+    ymin = 0.00
+    ymax = 0.40
+    zmin = 0.00
+    zmax = 0.01
+
+Elastic gate:
+    xmin = 1.20
+    xmax = 1.24
+    ymin = 0.010
+    ymax = 0.410
+    zmin = 0.00
+    zmax = 0.01
+
+Gate dimensions:
+    thickness_x = 0.04
+    height_y    = 0.40
+    depth_z     = 0.01
+
+Gate motion:
+    direction = +y
+    vT        = 0.20 m/s
+    hT        = 0.20 m
+    tLift     = 1.00 s

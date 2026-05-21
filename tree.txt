@@ -1,0 +1,70 @@
+.
+├── 0
+│   ├── fluid
+│   │   ├── alpha1.org
+│   │   ├── p
+│   │   ├── pd
+│   │   ├── pointMotionU
+│   │   ├── p_rgh
+│   │   └── U
+│   └── solid
+│       ├── D
+│       └── pointD
+├── Allclean
+├── Allclean.orig
+├── Allrun
+├── Allrun.orig
+├── caseParameters.txt
+├── constant
+│   ├── fluid
+│   │   ├── dynamicMeshDict
+│   │   ├── fluidProperties
+│   │   ├── fluidProperties.withDefaultValues
+│   │   ├── g
+│   │   ├── polyMesh
+│   │   │   └── blockMeshDict
+│   │   ├── transportProperties
+│   │   └── turbulenceProperties
+│   ├── fsiProperties
+│   ├── fsiProperties.withDefaultValues
+│   ├── g -> fluid/g
+│   ├── physicsProperties
+│   └── solid
+│       ├── dynamicMeshDict
+│       ├── g
+│       ├── mechanicalProperties
+│       ├── mechanicalProperties.withDefaultValues
+│       ├── polyMesh
+│       │   └── blockMeshDict
+│       ├── solidProperties
+│       ├── solidProperties.withDefaultValues
+│       └── timeSeries
+│           └── gateTopDisplacement.dat
+├── images
+│   ├── flexibleDamBreak-geometry.png
+│   └── flexibleDamBreak-plot.pdf
+├── patchMap.txt
+├── plot.gnuplot
+├── README.md
+├── referenceSolution
+│   └── refSol.tsv
+├── regressionTest.sh
+├── scripts
+│   └── README_postProcessing.md
+├── solid_README.md
+├── system
+│   ├── controlDict
+│   ├── decomposeParDict
+│   ├── fluid
+│   │   ├── decomposeParDict
+│   │   ├── fvSchemes
+│   │   ├── fvSolution
+│   │   └── setFieldsDict
+│   ├── fvSchemes
+│   └── solid
+│       ├── decomposeParDict
+│       ├── fvSchemes
+│       └── fvSolution
+└── tree.txt
+
+15 directories, 52 files
