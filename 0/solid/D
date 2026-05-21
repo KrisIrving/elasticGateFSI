@@ -22,17 +22,7 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    solidGateLeft
-    {
-        type            zeroGradient;
-    }
-
-    solidGateRight
-    {
-        type            zeroGradient;
-    }
-
-    gateBottom
+    interface
     {
         type            zeroGradient;
     }

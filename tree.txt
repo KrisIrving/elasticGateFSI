@@ -10,7 +10,6 @@
 │   └── solid
 │       ├── D
 │       └── pointD
-├── Allclean
 ├── Allclean.orig
 ├── Allrun
 ├── Allrun.orig
@@ -45,6 +44,7 @@
 │   └── flexibleDamBreak-plot.pdf
 ├── patchMap.txt
 ├── plot.gnuplot
+├── postProcessing
 ├── README.md
 ├── referenceSolution
 │   └── refSol.tsv
@@ -67,4 +67,4 @@
 │       └── fvSolution
 └── tree.txt
 
-15 directories, 52 files
+16 directories, 51 files

@@ -44,17 +44,7 @@ boundaryField
         value           uniform 0;
     }
 
-    fluidGateLeft
-    {
-        type            zeroGradient;
-    }
-
-    fluidGateRight
-    {
-        type            zeroGradient;
-    }
-
-    fluidGateBottom
+    interface
     {
         type            zeroGradient;
     }

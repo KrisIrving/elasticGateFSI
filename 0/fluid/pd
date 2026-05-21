@@ -48,19 +48,7 @@ boundaryField
         value           uniform 0;
     }
 
-    fluidGateLeft
-    {
-        type            fixedFluxPressure;
-        value           uniform 0;
-    }
-
-    fluidGateRight
-    {
-        type            fixedFluxPressure;
-        value           uniform 0;
-    }
-
-    fluidGateBottom
+    interface
     {
         type            fixedFluxPressure;
         value           uniform 0;

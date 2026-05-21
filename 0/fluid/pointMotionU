@@ -15,7 +15,6 @@ FoamFile
     object      pointMotionU;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
 dimensions      [0 1 -1 0 0 0 0];
 
 internalField   uniform (0 0 0);
@@ -44,19 +43,7 @@ boundaryField
         type            zeroGradient;
     }
 
-    fluidGateLeft
-    {
-        type            movingWallVelocity;
-        value           uniform (0 0 0);
-    }
-
-    fluidGateRight
-    {
-        type            movingWallVelocity;
-        value           uniform (0 0 0);
-    }
-
-    fluidGateBottom
+    interface
     {
         type            movingWallVelocity;
         value           uniform (0 0 0);
@@ -64,7 +51,7 @@ boundaryField
 
     fluidGateTop
     {
-        type            movingWallVelocity;
+        type            fixedValue;
         value           uniform (0 0 0);
     }
 
@@ -73,5 +60,4 @@ boundaryField
         type            empty;
     }
 }
-
 // ************************************************************************* //

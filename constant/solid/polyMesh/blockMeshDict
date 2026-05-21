@@ -41,29 +41,18 @@ edges
 
 boundary
 (
-    solidGateLeft
+    interface
     {
         type patch;
         faces
         (
+            // left side
             (0 4 7 3)
-        );
-    }
 
-    solidGateRight
-    {
-        type patch;
-        faces
-        (
+            // right side
             (1 2 6 5)
-        );
-    }
 
-    gateBottom
-    {
-        type patch;
-        faces
-        (
+            // bottom
             (0 1 5 4)
         );
     }

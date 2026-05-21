@@ -45,24 +45,15 @@ boundaryField
         value           uniform (0 0 0);
     }
 
-    fluidGateLeft
-    {
-        type            noSlip;
-    }
-
-    fluidGateRight
-    {
-        type            noSlip;
-    }
-
-    fluidGateBottom
+    interface
     {
         type            noSlip;
     }
 
     fluidGateTop
     {
-        type            noSlip;
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
     }
 
     frontAndBack

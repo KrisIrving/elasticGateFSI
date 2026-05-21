@@ -24,52 +24,34 @@ boundaryField
 {
     leftWall
     {
-        type            fixedFluxPressure;
-        value           uniform 0;
+        type            zeroGradient;
     }
 
     bottomWall
     {
-        type            fixedFluxPressure;
-        value           uniform 0;
+        type            zeroGradient;
     }
 
     rightOutlet
     {
-        type            totalPressure;
-        p0              uniform 0;
+        type            fixedValue;
         value           uniform 0;
     }
 
     topAtmosphere
     {
-        type            totalPressure;
-        p0              uniform 0;
+        type            fixedValue;
         value           uniform 0;
     }
 
-    fluidGateLeft
+    interface
     {
-        type            fixedFluxPressure;
-        value           uniform 0;
-    }
-
-    fluidGateRight
-    {
-        type            fixedFluxPressure;
-        value           uniform 0;
-    }
-
-    fluidGateBottom
-    {
-        type            fixedFluxPressure;
-        value           uniform 0;
+        type            zeroGradient;
     }
 
     fluidGateTop
     {
-        type            fixedFluxPressure;
-        value           uniform 0;
+        type            zeroGradient;
     }
 
     frontAndBack
