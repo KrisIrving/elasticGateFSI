@@ -19,7 +19,7 @@ FoamFile
 
 application     solids4Foam;
 
-startFrom       startTime;
+startFrom       latestTime;
 
 startTime       0;
 
