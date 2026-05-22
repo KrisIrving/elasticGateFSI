@@ -22,10 +22,10 @@ AitkenCoeffs
 {
     solidPatch      interface;
     fluidPatch      interface;
-    relaxationFactor 0.4;
+    relaxationFactor 0.2;
     interfaceDeformationLimit 0;
     outerCorrTolerance 1e-06;
-    nOuterCorr      20;
+    nOuterCorr      30;
     coupled         yes;
     additionalMeshCorrection false;
     couplingStartTime -1;
