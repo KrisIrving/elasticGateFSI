@@ -51,7 +51,20 @@ boundaryField
 
     fluidGateTop
     {
-        type            fixedValue;
+        type            uniformFixedValue;
+
+        uniformValue
+        {
+            type        table;
+            values
+            (
+                (0.00    (0 0.20 0))
+                (1.00    (0 0.20 0))
+                (1.0001  (0 0.00 0))
+                (3.00    (0 0.00 0))
+            );
+        }
+
         value           uniform (0 0 0);
     }
 
