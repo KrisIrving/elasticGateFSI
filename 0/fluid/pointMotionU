@@ -21,6 +21,12 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
+    interface
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
     leftWall
     {
         type            fixedValue;
@@ -35,15 +41,11 @@ boundaryField
 
     rightOutlet
     {
-        type            zeroGradient;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     topAtmosphere
-    {
-        type            zeroGradient;
-    }
-
-    interface
     {
         type            fixedValue;
         value           uniform (0 0 0);

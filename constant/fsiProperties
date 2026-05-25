@@ -25,11 +25,11 @@ AitkenCoeffs
     solidPatch interface;
     fluidPatch interface;
 
-    relaxationFactor 0.2;
+    relaxationFactor 0.4;
     interfaceDeformationLimit 0;
 
     outerCorrTolerance 1e-6;
-    nOuterCorr 30;
+    nOuterCorr 20;
 
     coupled yes;
 }

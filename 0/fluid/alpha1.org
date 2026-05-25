@@ -22,6 +22,11 @@ internalField   uniform 0;
 
 boundaryField
 {
+    interface
+    {
+        type            zeroGradient;
+    }
+    
     leftWall
     {
         type            zeroGradient;
@@ -44,11 +49,6 @@ boundaryField
         type            inletOutlet;
         inletValue      uniform 0;
         value           uniform 0;
-    }
-
-    interface
-    {
-        type            zeroGradient;
     }
 
     fluidGateTop

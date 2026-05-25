@@ -23,14 +23,22 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
+    interface
+    {
+        type            newMovingWallVelocity;
+        value           uniform (0 0 0);
+    }
+
     leftWall
     {
-        type            noSlip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     bottomWall
     {
-        type            noSlip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     rightOutlet
@@ -45,15 +53,9 @@ boundaryField
         value           uniform (0 0 0);
     }
 
-    interface
-    {
-        type            movingWallVelocity;
-        value           uniform (0 0 0);
-    }
-
     fluidGateTop
     {
-        type            movingWallVelocity;
+        type            newMovingWallVelocity;
         value           uniform (0 0 0);
     }
 

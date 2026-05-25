@@ -22,36 +22,40 @@ internalField   uniform 0;
 
 boundaryField
 {
+    interface
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+
     leftWall
     {
-        type            zeroGradient;
+        type            calculated;
+        value           uniform 0;
     }
 
     bottomWall
     {
-        type            zeroGradient;
+        type            calculated;
+        value           uniform 0;
     }
 
     rightOutlet
     {
-        type            fixedValue;
+        type            calculated;
         value           uniform 0;
     }
 
     topAtmosphere
     {
-        type            fixedValue;
+        type            calculated;
         value           uniform 0;
-    }
-
-    interface
-    {
-        type            zeroGradient;
     }
 
     fluidGateTop
     {
-        type            zeroGradient;
+        type            calculated;
+        value           uniform 0;
     }
 
     frontAndBack
