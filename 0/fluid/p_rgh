@@ -52,11 +52,11 @@ boundaryField
         p0              uniform 0;
     }
 
-    fluidGateTop
-    {
-        type            fixedFluxPressure;
-        value           uniform 0;
-    }
+    // fluidGateTop
+    // {
+    //     type            fixedFluxPressure;
+    //     value           uniform 0;
+    // }
 
     frontAndBack
     {

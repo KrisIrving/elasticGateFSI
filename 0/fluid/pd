@@ -62,10 +62,10 @@ boundaryField
         value           uniform 0;
     }
 
-    fluidGateTop
-    {
-        type            zeroGradient;
-    }
+    // fluidGateTop
+    // {
+    //     type            zeroGradient;
+    // }
 
     frontAndBack
     {

@@ -52,11 +52,11 @@ boundaryField
         value           uniform 0;
     }
 
-    fluidGateTop
-    {
-        type            calculated;
-        value           uniform 0;
-    }
+    // fluidGateTop
+    // {
+    //     type            calculated;
+    //     value           uniform 0;
+    // }
 
     frontAndBack
     {

@@ -28,19 +28,16 @@ boundaryField
         value           uniform (0 0 0);
     }
 
+    driveSide
+    {
+        type calculated;
+        value uniform (0 0 0);
+    }
+
     gateTop
     {
-        type uniformFixedValue;
-        uniformValue
-        {
-            type table;
-            values
-            (
-                (0.0    (0 0.0 0))
-                (1.0    (0 0.2 0))
-                (3.0    (0 0.2 0))
-            );
-        }
+        type            calculated;
+        value           uniform (0 0 0);
     }
 
     solidFrontAndBack

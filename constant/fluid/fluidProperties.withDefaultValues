@@ -11,7 +11,7 @@ FoamFile
     format      ascii;
     arch        "LSB;label=32;scalar=64";
     class       interFluid;
-    location    "constant/fluid";
+    location    "../constant/fluid";
     object      fluidProperties.withDefaultValues;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

@@ -19,20 +19,37 @@ scale 1;
 
 vertices
 (
+    // z = 0
     (1.20 0.010 0.00) // 0
     (1.24 0.010 0.00) // 1
     (1.24 0.410 0.00) // 2
     (1.20 0.410 0.00) // 3
+    (1.24 1.200 0.00) // 4
+    (1.20 1.200 0.00) // 5
+    (1.24 1.400 0.00) // 6
+    (1.20 1.400 0.00) // 7
 
-    (1.20 0.010 0.01) // 4
-    (1.24 0.010 0.01) // 5
-    (1.24 0.410 0.01) // 6
-    (1.20 0.410 0.01) // 7
+    // z = 0.01
+    (1.20 0.010 0.01) // 8
+    (1.24 0.010 0.01) // 9
+    (1.24 0.410 0.01) // 10
+    (1.20 0.410 0.01) // 11
+    (1.24 1.200 0.01) // 12
+    (1.20 1.200 0.01) // 13
+    (1.24 1.400 0.01) // 14
+    (1.20 1.400 0.01) // 15
 );
 
 blocks
 (
-    hex (0 1 2 3 4 5 6 7) (12 120 1) simpleGrading (1 1 1)
+    // original gate part in the water/gate-height region
+    hex (0 1 2 3 8 9 10 11) (12 120 1) simpleGrading (1 1 1)
+
+    // in-domain upper gate/guide part, matching the upper fluid-side interface
+    hex (3 2 4 5 11 10 12 13) (12 120 1) simpleGrading (1 1 1)
+
+    // drive extension outside the fluid domain; top face is prescribed gateTop
+    hex (5 4 6 7 13 12 14 15) (12 30 1) simpleGrading (1 1 1)
 );
 
 edges
@@ -46,14 +63,16 @@ boundary
         type patch;
         faces
         (
-            // gate left side
-            (0 4 7 3)
+            // left side: lower + upper in-domain side
+            (0 8 11 3)
+            (3 11 13 5)
 
-            // gate right side
-            (1 2 6 5)
+            // right side: lower + upper in-domain side
+            (1 2 10 9)
+            (2 4 12 10)
 
-            // gate bottom side
-            (0 1 5 4)
+            // bottom side
+            (0 1 9 8)
         );
     }
 
@@ -62,7 +81,18 @@ boundary
         type patch;
         faces
         (
-            (3 7 6 2)
+            (7 15 14 6)
+        );
+    }
+
+    driveSide
+    {
+        type patch;
+        faces
+        (
+            // extension side faces outside the fluid domain
+            (5 13 15 7)
+            (4 6 14 12)
         );
     }
 
@@ -71,8 +101,15 @@ boundary
         type empty;
         faces
         (
+            // z = 0
             (0 3 2 1)
-            (4 5 6 7)
+            (3 5 4 2)
+            (5 7 6 4)
+
+            // z = 0.01
+            (8 9 10 11)
+            (11 10 12 13)
+            (13 12 14 15)
         );
     }
 );

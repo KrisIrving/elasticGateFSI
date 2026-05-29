@@ -53,11 +53,11 @@ boundaryField
         value           uniform (0 0 0);
     }
 
-    fluidGateTop
-    {
-        type            newMovingWallVelocity;
-        value           uniform (0 0 0);
-    }
+    // fluidGateTop
+    // {
+    //     type            newMovingWallVelocity;
+    //     value           uniform (0 0 0);
+    // }
 
     frontAndBack
     {

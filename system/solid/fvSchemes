@@ -29,6 +29,8 @@ ddtSchemes
 gradSchemes
 {
     default            leastSquares;
+    grad(D)         leastSquaresS4f;
+    grad(DD)        leastSquaresS4f;
 }
 
 divSchemes
