@@ -38,10 +38,32 @@ boundaryField
         value uniform (0 0 0);
     }
 
+    // gateTop
+    // {
+    //     type fixedValue;
+    //     value uniform (0 2e-7 0);
+    // }
+
     gateTop
     {
-        type fixedValue;
-        value uniform (0 2e-7 0);
+        type codedFixedValue;
+        value uniform (0 0 0);
+        name gateTopIncrementFromVelocity;
+        code
+        #{
+            const scalar t = this->db().time().value();
+            const scalar dt = this->db().time().deltaTValue();
+
+            // Incremental displacement DD = U_gate * deltaT.
+            // 0~1 s: 0.2 m/s upward; after 1 s: stopped.
+            scalar dy = 0.0;
+            if (t <= 1.0)
+            {
+                dy = 0.2*dt;
+            }
+
+            operator==(vector(0, dy, 0));
+        #};
     }
 
     solidFrontAndBack

@@ -25,9 +25,9 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         0.1;
+endTime         0.01;
 
-deltaT          1e-6;
+deltaT          1e-5;
 
 writeControl    adjustableRunTime;
 
@@ -47,33 +47,16 @@ timePrecision   6;
 
 runTimeModifiable yes;
 
-adjustTimeStep  no;
+adjustTimeStep  yes;
 
-maxCo           0.02;
+maxCo           0.15;
 
-maxDeltaT       1e-4;
+maxDeltaT       1e-3;
 
-maxAlphaCo      0.02;
+maxAlphaCo      0.05;
 
 functions
 {
-    gateTopDisplacement
-    {
-        type        solidPointDisplacement;
-        point       (1.22 0.410 0.005);
-    }
-
-    gateMidDisplacement
-    {
-        type        solidPointDisplacement;
-        point       (1.22 0.210 0.005);
-    }
-
-    gateBottomDisplacement
-    {
-        type        solidPointDisplacement;
-        point       (1.22 0.010 0.005);
-    }
 }
 
 // ************************************************************************* //
