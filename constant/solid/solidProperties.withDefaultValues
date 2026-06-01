@@ -16,9 +16,9 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solidModel      nonLinearGeometryTotalLagrangianTotalDisplacement;
+solidModel      nonLinearGeometryUpdatedLagrangian;
 
-nonLinearGeometryTotalLagrangianTotalDisplacementCoeffs
+nonLinearGeometryUpdatedLagrangianCoeffs
 {
     dampingCoeff    dampingCoeff [ 0 0 -1 0 0 0 0 ] 0;
     solutionTolerance 1e-06;

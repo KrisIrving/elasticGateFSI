@@ -41,7 +41,7 @@ boundaryField
     gateTop
     {
         type fixedValue;
-        value uniform (0 2e-6 0);
+        value uniform (0 2e-7 0);
     }
 
     solidFrontAndBack
