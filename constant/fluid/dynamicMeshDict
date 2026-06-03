@@ -20,6 +20,8 @@ dynamicFvMesh dynamicMotionSolverFvMesh;
 
 "solver|motionSolver" velocityLaplacian;
 
-diffusivity quadratic inverseDistance (interface);
+// diffusivity quadratic inverseDistance (interface);
+
+diffusivity     uniform;
 
 // ************************************************************************* //
