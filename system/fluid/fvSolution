@@ -98,7 +98,7 @@ PIMPLE
 {
     momentumPredictor yes;
     nOuterCorrectors 1;
-    nCorrectors     4;
+    nCorrectors     2;
     nNonOrthogonalCorrectors 0;
     nAlphaCorr      1;
     nAlphaSubCycles 2;
