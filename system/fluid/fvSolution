@@ -24,24 +24,23 @@ solvers
 
     "alpha.water.*"
     {
-        nAlphaCorr      2;
+        nAlphaCorr      1;
         nAlphaSubCycles 1;
         cAlpha          1;
-
         MULESCorr       yes;
-        nLimiterIter    5;
+        nLimiterIter    3;
 
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-8;
-        relTol          0;
+        tolerance       1e-6;
+        relTol          0.05;
     }
 
     "pcorr|pcorrFinal"
     {
         solver          PCG;
         preconditioner  DIC;
-        tolerance       1e-10;
+        tolerance       1e-8;
         relTol          0;
     }
 
@@ -49,15 +48,15 @@ solvers
     {
         solver          PCG;
         preconditioner  DIC;
-        tolerance       1e-07;
-        relTol          0.05;
+        tolerance       1e-6;
+        relTol          0.1;
     }
 
     "pdFinal|p_rghFinal"
     {
         solver          PCG;
         preconditioner  DIC;
-        tolerance       1e-07;
+        tolerance       1e-6;
         relTol          0;
     }
 
@@ -65,21 +64,24 @@ solvers
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-06;
-        relTol          0;
+        tolerance       1e-5;
+        relTol          0.1;
     }
 
     cellMotionU
     {
         solver          GAMG;
-        tolerance       1e-06;
-        relTol          0.001;
+        tolerance       1e-5;
+        relTol          0.01;
+
         minIter         1;
-        maxIter         100;
+        maxIter         50;
+
         smoother        GaussSeidel;
         nPreSweeps      0;
         nPostSweeps     2;
         nFinestSweeps   2;
+
         scaleCorrection true;
         directSolveCoarsest false;
         cacheAgglomeration true;
@@ -91,17 +93,18 @@ solvers
 
 PISO
 {
-    cAlpha          1;
+    cAlpha 1;
 }
 
 PIMPLE
 {
     momentumPredictor yes;
-    nOuterCorrectors 1;
-    nCorrectors     2;
-    nNonOrthogonalCorrectors 0;
-    nAlphaCorr      1;
-    nAlphaSubCycles 2;
-}
 
+    nOuterCorrectors 1;
+    nCorrectors 2;
+    nNonOrthogonalCorrectors 0;
+
+    nAlphaCorr      1;
+    nAlphaSubCycles 1;
+}
 // ************************************************************************* //

@@ -28,12 +28,6 @@ boundaryField
         value           uniform (0 0 0);
     }
 
-    driveSide
-    {
-        type calculated;
-        value uniform (0 0 0);
-    }
-
     gateTop
     {
         type            calculated;

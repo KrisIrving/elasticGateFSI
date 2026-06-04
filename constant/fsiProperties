@@ -29,7 +29,7 @@ AitkenCoeffs
     interfaceDeformationLimit 0;
 
     outerCorrTolerance 1e-6;
-    nOuterCorr 10;
+    nOuterCorr 2;
 
     coupled yes;
 }

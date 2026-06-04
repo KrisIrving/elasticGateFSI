@@ -30,14 +30,6 @@ boundaryField
         value           uniform (0 0 0);
     }
 
-    driveSide
-    {
-        type solidTraction;
-        traction uniform (0 0 0);
-        pressure uniform 0;
-        value uniform (0 0 0);
-    }
-
     // gateTop
     // {
     //     type fixedValue;
