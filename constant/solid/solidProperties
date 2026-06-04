@@ -25,6 +25,15 @@ solidModel nonLinearGeometryUpdatedLagrangian;
 
 nonLinearGeometryUpdatedLagrangianCoeffs
 {
+    solutionAlgorithm implicitSegregated;
+
+    nCorrectors          20;
+    minCorrectors        1;
+
+    solutionTolerance    1e-5;
+    alternativeTolerance 1e-5;
+
+    infoFrequency        1;
 }
 
 // ************************************************************************* //

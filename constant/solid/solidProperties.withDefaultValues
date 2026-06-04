@@ -20,13 +20,14 @@ solidModel      nonLinearGeometryUpdatedLagrangian;
 
 nonLinearGeometryUpdatedLagrangianCoeffs
 {
-    dampingCoeff    dampingCoeff [ 0 0 -1 0 0 0 0 ] 0;
-    solutionTolerance 1e-06;
-    alternativeTolerance 1e-07;
-    materialTolerance 1e-05;
-    infoFrequency   100;
-    nCorrectors     10000;
+    solutionAlgorithm implicitSegregated;
+    nCorrectors     20;
     minCorrectors   1;
+    solutionTolerance 1e-05;
+    alternativeTolerance 1e-05;
+    infoFrequency   1;
+    dampingCoeff    dampingCoeff [ 0 0 -1 0 0 0 0 ] 0;
+    materialTolerance 1e-05;
     writeResidualField false;
     relaxationMethod fixed;
     restart         false;

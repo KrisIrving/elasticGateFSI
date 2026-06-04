@@ -17,10 +17,27 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 //fluidSolidInterface    fixedRelaxation;
-fluidSolidInterface    Aitken;
-//fluidSolidInterface    IQNILS;
 
-AitkenCoeffs
+
+// fluidSolidInterface    Aitken;
+
+// AitkenCoeffs
+// {
+//     solidPatch interface;
+//     fluidPatch interface;
+
+//     relaxationFactor 0.2;
+//     interfaceDeformationLimit 0;
+
+//     outerCorrTolerance 1e-6;
+//     nOuterCorr 2;
+
+//     coupled yes;
+// }
+
+fluidSolidInterface    IQNILS;
+
+IQNILSCoeffs
 {
     solidPatch interface;
     fluidPatch interface;
@@ -28,8 +45,8 @@ AitkenCoeffs
     relaxationFactor 0.2;
     interfaceDeformationLimit 0;
 
-    outerCorrTolerance 1e-6;
-    nOuterCorr 2;
+    outerCorrTolerance 1e-4;
+    nOuterCorr 5;
 
     coupled yes;
 }

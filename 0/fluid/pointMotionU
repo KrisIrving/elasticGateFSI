@@ -56,6 +56,26 @@ boundaryField
         type            zeroGradient;
     }
 
+    // fluidGateTop
+    // {
+    //     type codedFixedValue;
+    //     value uniform (0 0 0);
+    //     name fluidGateTopVelocity;
+
+    //     code
+    //     #{
+    //         const scalar t = this->db().time().value();
+
+    //         scalar vy = 0.0;
+    //         if (t <= 1.0)
+    //         {
+    //             vy = 0.01;
+    //         }
+
+    //         operator==(vector(0, vy, 0));
+    //     #};
+    // }
+
     frontAndBack
     {
         type            empty;
