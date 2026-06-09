@@ -22,6 +22,10 @@ dynamicFvMesh dynamicMotionSolverFvMesh;
 
 // diffusivity quadratic inverseDistance (interface);
 
+// diffusivity quadratic inverseDistance (interface fluidGateTop);
+
+// diffusivity inverseDistance (interface fluidGateTop);
+
 diffusivity     uniform;
 
 // ************************************************************************* //
